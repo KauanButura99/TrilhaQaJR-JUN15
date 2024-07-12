@@ -30,6 +30,14 @@ Funcionalidade: Tela de Registre-se
         | test@test.com | 12345 |                 | Inativo     | Captcha é necessário para verificar se você é um ser humano. |
         |               |       |                 |             | Impossibilitado de se registrar                              |
 
+    Cenário: Registrar-se com uma conta já existente na plataforma
+    Dado que estou na página de registre-se do Código Certo
+    Quando eu preencher o campo "Email" com "test@test.com"
+    E eu preencher o campo "Senha" com "test12345"
+    E eu clicar na caixa "Não sou um robô"
+    E eu clicar no botão "Registre-se"
+    Então deve mostrar uma mensagem "Email já existente"
+
     Cenário: Registrar-se com a conta do Google válida
     Dado que estou na página de registre-se do Código Certo
     Quando eu clicar no ícone do Google
@@ -41,3 +49,11 @@ Funcionalidade: Tela de Registre-se
     Quando eu clicar no ícone do Google
     E houver uma falha de conectividade com o Google
     Então deve aparecer uma mensagem "Erro ao se registrar"
+
+    Cenário: Design responsivo em desktop
+    Dado que estou na página de registre-se do Código Certo usando um dispositivo desktop
+    Então todos os elementos devem ser exibidos corretamente sem sobreposição
+
+    Cenário: Design responsivo em dispositivo móvel
+    Dado que estou na página de registre-se do Código Certo usando um dispositivo móvel
+    Então todos os elementos devem ser exibidos corretamente sem sobreposição

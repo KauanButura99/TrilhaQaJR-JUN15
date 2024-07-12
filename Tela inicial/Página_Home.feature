@@ -11,7 +11,7 @@ Funcionalidade: Página Inicial
 
     Cenário: Problemas de rede ao carregar a Página
     Dado que estou com problemas de conectividade com o site
-    Quando eu estiver na Tela Inicial
+    Quando eu estiver na página inicial
     Então devo visualizar uma mensagem de "Por favor, volte mais tarde"
 
     Cenário: Exibir ícone do site
