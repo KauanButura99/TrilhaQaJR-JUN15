@@ -14,99 +14,148 @@ Funcionalidade: Página Inicial
     Quando eu estiver na página inicial
     Então devo visualizar uma mensagem de "Por favor, volte mais tarde"
 
+    Cenário: Formatação dos textos da página
+    Dado Dado que estou na página inicial do Código Certo
+    Quando carregar a página 
+    Entao devo visualizar os textos da página indentados
+
+    Cenário: As imagens da página
+    Dado Dado que estou na página inicial do Código Certo
+    Quando carregar a página 
+    Entao devo visualizar as fotos da página corretamente
+
     Cenário: Exibir ícone do site
     Dado que estou na página inicial do Código Certo
     Então devo ver o ícone do "Código Certo" no canto superior esquerdo
-
-    Cenário: Arquivo do ícone do site ausente
-    Dado que estou na página inicial do Código Certo
-    Quando o ícone do site não aparecer 
-    Então devo ver um ícone de substituição em vez do ícone do site
 
     Cenário: Interação o com ícone do Codigo Certo
     Dado que estou na página em outra página do Código Certo
     Quando eu clicar no ícone do site
     Então devo voltar para a Página Inicial
 
-    Esquema do Cenário: Botão de 'Vagas'
+    Cenário: Arquivo do ícone do site ausente
     Dado que estou na página inicial do Código Certo
-    Quando eu clicar no botão 'Vagas' no header da página
-    Então o botão 'Vagas' deve ser <visivel>
-    E o botão 'Vagas' deve estar <funcional>
-    Então o comportamento deve ser <comportamento_esperado>
+    Quando o ícone do site não aparecer 
+    Então devo ver um ícone de substituição em vez do ícone do site
 
-    Exemplos:
-
-            | visivel | Funcional | comportamento_esperado |
-            | Sim     | Sim       | Válido                 |
-            | Não     | Sim       | Válido                 |
-            | Sim     | Não       | Iválido                |
-            | Não     | Não       | Iválido                |
-
-
-    Esquema do Cenário: Botão de 'Projetos'
+    Cenário: Botão de 'Vagas' deve ser visível no Header da página
     Dado que estou na página inicial do Código Certo
-    Quando eu clicar no botão 'Projetos' no header da página
-    Então o botão 'Projetos' deve ser <visivel>
-    E o botão 'Projetos' deve estar <funcional>
-    Então o comportamento deve ser <comportamento_esperado>
+    Então o botão 'Vagas' deve ser visível
 
-    Exemplos:
+    Cenário: Botão de 'Vagas' deve me redirecionar para página de Vagas
+    Dado que estou na página inicial do Código Certo
+    Quando eu clicar no botão de "Vagas" no header da página
+    Então devo ser redirecionado para página de vagas    
 
-            | visivel | Funcional | comportamento_esperado |
-            | Sim     | Sim       | Válido                 |
-            | Não     | Sim       | Válido                 |
-            | Sim     | Não       | Iválido                |
-            | Não     | Não       | Iválido                |
+    Cenário: Botão de 'Projetos' deve ser visível no Header da página
+    Dado que estou na página inicial do Código Certo
+    Então o botão 'Projeto' deve ser visível no header da página
+
+    Cenário: Botão de 'Projetos' deve me redirecionar para página de Projeto
+    Dado que estou na página inicial do Código Certo
+    Quando eu clicar no botão de "Projeto" no header da página
+    Então devo ser redirecionado para página de vagas     
+
+    Cenário: Botão de 'Eventos' deve ser visível no Header da página
+    Dado que estou na página inicial do Código Certo
+    Então o botão 'Eventos' deve ser visível no header da página
+
+    Cenário: Botão de 'Eventos' deve me redirecionar para página de Eventos
+    Dado que estou na página inicial do Código Certo
+    Quando eu clicar no botão de "Eventos" no header da página
+    Então devo ser redirecionado para página de Eventos 
    
-
-    Esquema do Cenário: Botão de 'Eventos'
+    Cenário: Botão de 'Sobre' deve ser visível no Header da página
     Dado que estou na página inicial do Código Certo
-    Quando eu clicar no botão 'Eventos' no header da página
-    Então o botão 'Eventos' deve ser <visivel>
-    E o botão 'Eventos' deve estar <funcional>
-    Então o comportamento deve ser <comportamento_esperado>
+    Então o botão 'Sobre' deve ser visível no header da página
 
-    Exemplos:
-
-            | visivel | Funcional | comportamento_esperado |
-            | Sim     | Sim       | Válido                 |
-            | Não     | Sim       | Válido                 |
-            | Sim     | Não       | Iválido                |
-            | Não     | Não       | Iválido                |
-
-
-    Esquema do Cenário: Botão de 'Sobre'
+    Cenário: Botão de 'Sobre' deve me redirecionar para página de Sobre
     Dado que estou na página inicial do Código Certo
-    Quando eu clicar no botão 'Sobre' no header da página
-    Então o botão 'Sobre' deve ser <visivel>
-    E o botão 'Sobre' deve estar <funcional>
-    Então o comportamento deve ser <comportamento_esperado>
+    Quando eu clicar no botão "Sobre" no header da página
+    Então devo ser redirecionado para página de Sobre
 
-    Exemplos:
-
-            | visivel | Funcional | comportamento_esperado |
-            | Sim     | Sim       | Válido                 |
-            | Não     | Sim       | Válido                 |
-            | Sim     | Não       | Iválido                |
-            | Não     | Não       | Iválido                |
-
-    Esquema do Cenário: Botão de 'Fazer Login'
+    Cenário: Botão de 'Sobre' deve ser visível no Header da página
     Dado que estou na página inicial do Código Certo
-    Quando eu clicar no botão 'Fazer Login' no header da página
-    Então o botão 'Fazer Login' deve ser <visivel>
-    E o botão 'Fazer Login' deve estar <funcional>
-    Então o comportamento deve ser <comportamento_esperado>
+    Então o botão 'Sobre' deve ser visível no header da página
 
-    Exemplos:
+    Cenário: Botão de 'Sobre' deve te redirecionar para página de Sobre
+    Dado que estou na página inicial do Código Certo
+    Quando eu clicar no botão de "Sobre" no header da página
+    Então devo ser redirecionado para página de Sobre
 
-            | visivel | Funcional | comportamento_esperado |
-            | Sim     | Sim       | Válido                 |
-            | Não     | Sim       | Válido                 |
-            | Sim     | Não       | Iválido                |
-            | Não     | Não       | Iválido                |
+    Cenário: Botão de 'Fazer login' deve ser visível no Header da página
+    Dado que estou na página inicial do Código Certo
+    Então o botão 'Fazer login' deve ser visível no header da página
 
- 
+    Cenário: Botão de 'Fazer login' deve me redirecionar para página Fazer login
+    Dado que estou na página inicial do Código Certo
+    Quando eu clicar no botão de "Fazer login" no header da página
+    Então devo ser redirecionado para página de Login   
+
+    Cenário: A foto do meu perfil deve ser visível no Header da página
+    Dado que estou logado na página do Código Certo
+    Então a foto do meu perfil deve ser visível no header da página
+
+    Cenário: A foto do meu perfil deve ter um menu suspenso
+    Dado que estou logado na página do Código Certo
+    Quando eu clicar na foto do meu perfil
+    Então o menu suspenso deve ser exibido com as opções "Perfil", "Minha conta" e "Sair"
+
+    Cenário: Botão de 'Vagas' deve ser visível no body da página
+    Dado que estou na página inicial do Código Certo
+    Então o botão 'Vagas' deve ser visível no body da página
+
+    Cenário: Botão de 'Vagas' deve me redirecionar para página de Vagas
+    Dado que estou na página inicial do Código Certo
+    Quando eu clicar no botão de "Vagas" no body da página
+    Então devo ser redirecionado para página de Vagas
+
+    Cenário: Botão de 'Quero ser um Mentor' deve ser visível no body da página
+    Dado que estou na página inicial do Código Certo
+    Então o botão 'Quero ser um Mentor' deve ser visível no body da página
+
+    Cenário: Botão de 'Quero ser um Mentor' deve me redirecionar para o chat do Vinicius no "WhatsApp"
+    Dado que estou na página inicial do Código Certo
+    Quando eu clicar no botão de "Quero ser um Mentor" no body da página
+    E deve me redirecionar para o chat do Vinicius no "WhatsApp"
+    Então deve ter uma mensagem pré-encaminhada "Olá, já tenho experiência na área e gostaria de me tornar um mentor"
+
+    Cenário: O ícone do "WhatsApp" deve ser visível no footer da página
+    Dado que estou na página inicial do Código Certo
+    Então o ícone do 'WhatsApp' deve ser visível no footer da página    
+
+    Cenário: O ícone do 'WhatsApp' deve me redirecionar para participar do grupo Código Certo
+    Dado que estou na página inicial do Código Certo
+    Quando eu clicar no ícone do "WhatsApp" no footer da página
+    Então devo ser redirecionado para o grupo do Código Certo no "WhatsApp"   
+
+    Cenário: O ícone do "LinkedIn" deve ser visível no footer da página
+    Dado que estou na página inicial do Código Certo
+    Então o ícone do 'LinkedIn' deve ser visível no footer da página    
+
+    Cenário: O ícone do "LinkedIn" deve me redirecionar para a página do Código Certo no LinkedIn
+    Dado que estou na página inicial do Código Certo
+    Quando eu clicar no ícone do "LinkedIn" no footer da página
+    Então devo ser redirecionado para a página do Código Certo no "LinkedIn"       
+
+    Cenário: O ícone do "Discord" deve ser visível no footer da página
+    Dado que estou na página inicial do Código Certo
+    Então o ícone do 'Discord' deve ser visível no footer da página    
+
+    Cenário: O ícone do 'Discord' deve me redirecionar para o canal do Código Certo no Discord
+    Dado que estou na página inicial do Código Certo
+    Quando eu clicar no ícone do "Discord" no footer da página
+    Então devo ser redirecionado para o canal do Código Certo no "Discord"   
+
+    Cenário: O ícone do "GitHub" deve ser visível no footer da página
+    Dado que estou na página inicial do Código Certo
+    Então o ícone do 'GitHub' deve ser visível no footer da página    
+
+    Cenário: O ícone do 'GitHub' deve me redirecionar para o perfil do Código Certo no GitHub
+    Dado que estou na página inicial do Código Certo
+    Quando eu clicar no ícone do "GitHub" no footer da página
+    Então devo ser redirecionado para o perfil do Código Certo no "GitHub"
+
     Cenário: Design responsivo em desktop
     Dado que estou na página inicial do Código Certo usando um dispositivo desktop
     Então todos os elementos devem ser exibidos corretamente sem sobreposição

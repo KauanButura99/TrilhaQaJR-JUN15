@@ -5,6 +5,31 @@ Como usuário da Plataforma Código Certo
 Quero visualizar as vagas disponívesis 
 Para que eu possa se registrar nas vagas de voluntários
 
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     Cenário: Página deve carregar as informações
     Dado que eu estou na página de vagas do Código Certo
     Quando fazer o carragamento da página 
@@ -28,14 +53,11 @@ Para que eu possa se registrar nas vagas de voluntários
     Quando eu preencher o formulário de inscrição e enviar
     Então eu devo ver uma mensagem de confirmação "Inscrição realizada com sucesso"
 
+    // fazer casos de cada campo na página de inscrição vaga plataforma. Para verificar o funcionamento desses campos
+
     Cenário: Registrar-se para uma vaga de voluntário
     Dado que estou na página de formulário de inscrição da vaga da Plataforma Código Certo
     Quando eu preencher o campo <nome>
-    E eu preencher o campo <sobrenome>
-    E eu preencher o campo <email>
-    E eu preencher o campo <celular>
-    E eu escolher o <horario_disponivel>
-    E eu escolher a minha <experiencia> 
     Então eu devo ver uma mensagem <comportamento_esperado>
 
             Exemplos:
