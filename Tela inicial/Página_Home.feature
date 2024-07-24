@@ -24,9 +24,33 @@ Funcionalidade: Página Inicial
     Quando carregar a página 
     Entao devo visualizar as fotos da página corretamente
 
+    Cenário: Cor do Background da página
+    Dado que estou na página inicial do Código Certo
+    Entao a cor deve ser Preta 
+
+    Cenário: Fonte da página deve ser branca
+    Dado que estou na página inicial do Código Certo
+    Entao as cores das fontes devem ser brancas
+
+    Cenário: Comportamento do mouse quando está em cima de um botão no Header
+    Dado que estou na página inicial do Código Certo
+    Quando eu passar o cursor do mouse em cima dos botões "Vagas", "Projetos", "Eventos" 
+    E "Sobre"
+    Entao eles devem ficar vermelho
+
+    Cenário: Botões quando selecionado no header da página devem ficam Vermelhos
+    Dado que estou na página inicial do Código Certo
+    Quando eu selecionar os botões "Vagas", "Projetos", "Eventos" 
+    E "Sobre"
+    Entao eles devem ficar vermelho 
+
     Cenário: Exibir ícone do site
     Dado que estou na página inicial do Código Certo
     Então devo ver o ícone do "Código Certo" no canto superior esquerdo
+
+    Cenário: Cor do ícone do site
+    Dado que estou na página inicial do Código Certo
+    Entao a cor do ícone deve ser veremelho
 
     Cenário: Interação o com ícone do Codigo Certo
     Dado que estou na página em outra página do Código Certo
@@ -100,6 +124,10 @@ Funcionalidade: Página Inicial
     Dado que estou logado na página do Código Certo
     Quando eu clicar na foto do meu perfil
     Então o menu suspenso deve ser exibido com as opções "Perfil", "Minha conta" e "Sair"
+
+    Cenário: Deve conter uma imagem móvel
+    Dado que estou na página inicial do Código Certo
+    Então nas seção de "Construindo o amanhã, hoje" deve conter uma imagem se movendo
 
     Cenário: Botão de 'Vagas' deve ser visível no body da página
     Dado que estou na página inicial do Código Certo
