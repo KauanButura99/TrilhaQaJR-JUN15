@@ -14,6 +14,11 @@ Funcionalidade: Tela de Registre-se
     Quando eu estiver na página registre-se
     Então devo visualizar uma mensagem de "Por favor, volte mais tarde"
 
+    Cenário: Botão "X" no canto superior a direita para fechar da página "Registre-se"
+    Dado que estou na página de registre-se do Codigo Certo
+    Quando eu clicar no botão "X"
+    Entao devo ser redirecionado para página inicial do Codigo Certo
+
     Cenário: Formatação dos textos da página
     Dado Dado que estou na página registre-se do Codigo Certo
     Quando carregar a página 
@@ -25,16 +30,18 @@ Funcionalidade: Tela de Registre-se
 
     Cenário: Fonte da página deve ser branca
     Dado que estou na página de registre-se do Codigo Certo
-    Entao as cores das fontes devem ser brancas
+    Quando carregar o texto "Registre-se"
+    E "Já é membro?"
+    Entao as cores dos textos devem ser brancas
 
     Cenario: Opção de link para ser direcionado para página de login
     Dado que estou na página de registre-se do Codigo Certo
-    Quando eu clicar no botão "Login"
+    Quando eu clicar no link "Login"
     Entao devo ir para página de Login
 
-    Cenário: Cor do botão "Login" 
+    Cenário: Cor do link "Login" 
     Dado que estou na página de registre-se do Codigo Certo
-    Entao o botão "Login" deve ser vermelho
+    Entao o link "Login" deve ser vermelho
 
     Cenário: Botão de Registrar-se com Google deve estar presente na página
     Dado que estou na página de registre-se do Codigo Certo
@@ -49,22 +56,14 @@ Funcionalidade: Tela de Registre-se
     Cenário: Registrar-se com a conta do Google inválida
     Dado que estou na página de registre-se do Codigo Certo
     Quando eu clicar no ícone do Google
-    E houver uma falha de conectividade com o Google
-    Então deve aparecer uma mensagem "Erro ao se registrar"
+    E prencher o campo "Email" com "2pac@thegodfather.com"
+    E senha "12345"
+    Então deve aparecer uma mensagem "Esta conta não existe" 
 
-    Cenário: Botão de "Registrar-se com email" deve estar presente na página
-    Dado que estou na página de registre-se do Codigo Certo
-    Entao o botão "Registrar-se com email" deve estar visível
-
-    Cenário: Devo conseguir se registrar com a conta o "Email"
+    Cenário: Devo conseguir se registrar com a conta "Email"
     Dado que estou na página de registre-se do Codigo Certo
     Quando eu clicar no botão "Registrar-se com o email"
-    Então devo ser direcionado para outra página de preenchimento dos meus dados 
-
-    Cenário: Botão "X" no canto superior a direita para fechar da página "Registre-se"
-    Dado que estou na página de registre-se do Codigo Certo
-    Quando eu clicar no botão "X"
-    Entao devo ser redirecionado para página inicial do Codigo Certo
+    Então devo ser direcionado para outra página de preenchimento dos meus dados cadastrais
 
     Cenário: Botão "Saiba mais"
     Dado que estou na página de registre-se do Codigo Certo
@@ -84,7 +83,7 @@ Funcionalidade: Tela de Registre-se
     Esquema do Cenário: O campo "Email" só deve aceitar email
     Dado que eu estou na página de registre-se do Codigo Certo
     Quando eu preencher o campo "Email" com <dados> 
-    Entao não deve aceitar outros tipos de dados <comportamento_esperado>
+    Entao deve aparecer <comportamento_esperado>   
 
             | dados        | comportamento_esperado                 |
             | Test         | Verifique seu email e tente novamente. |
