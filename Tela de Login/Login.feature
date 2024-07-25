@@ -6,6 +6,8 @@ Quero me autenticar no site
 Para se increver nos projetos voluntários
 
     Cenário: Carregamento da Página de Login
+    Dado que estou na página de login do Codigo Certo
+    Então devo visualizar todos os conteúdos da página corretamente
 
     Cenário: Problema de conectividade com a Página de Login
     Dado que estou com problemas de conectividade com o site
@@ -165,10 +167,16 @@ Para se increver nos projetos voluntários
     Entao devo conseguir preecher o campo "Confirme a nova senha" com "145644" 
 
     Cenário: Verificar botão "Redefinir senha"
+    Dado que eu estou na página de "Redefinir senha"
+    Então  Então devo visualizar o botão "Redefinir senha"
 
     Cenário: Verificar Posição botão "Redefinir senha"
+    Dado que eu estou na página de "Redefinir senha"
+    Então devo validar a posição do botão "Redefinir senha" com base na documentação
 
     Cenario: Verificar cor do botão "Redefinir senha"
+    Dado que eu estou na página de "Redefinir senha"
+    Então devo validar a cor do botão "Redefinir senha" com base na documentação
 
     Cenário: Redefinir senha com sucesso
     Dado que eu estou na página de "Redefinir senha"
@@ -177,35 +185,24 @@ Para se increver nos projetos voluntários
     E clicar no botão "Redefinir senha"
     Então deve aparecer a mensagem "Sua senha foi alterada"
 
-   
+    Esquema do Cenário: Multiplas redefinições de senha inválida 
+    Dado que eu estou na página de "Redefinir senha"
+    Quando eu inserir dados incorretos nos campos <Insira_uma_nova_senha>
+    E <confirme_a_nova_senha>
+    Entao deve aparece <comportamento_esperado>
 
-    Cenário: Campos de "Redefinição de senha" em branco 
+      Exemplos:
+      | Insira_uma_nova_senha | confirme_a_senha | comportamento_esperado                    |
+      |                       |                  | Insira uma senha                          |
+      | test123               | test345h         | As senhas não coincidem. Tente novamente. |
 
 
-
-
-    
-
-    Cenário: Recuperação de senha com email existente
-    Dado que estou na página de redefinir senha
-    Quando eu preencher o campo "Email" com "test@test.com"
-    E eu clicar no botão "Redefinir Senha"
-    Então deve aparecer a mensagem "Verifique seu email"
-    Quando eu acessar o link de redefinição de senha no email
-    E eu preencher o campo "Insira uma nova senha" com <nova_senha>
-    E eu preencher o campo "Confirme a nova senha" com <confirme_a_senha>
-    E eu clicar no botão "Redefinir Senha"
-    Então deve aparecer a mensagem <comportamento_esperado> //da para ser aproveitado
-
-    Exemplos:
-      | link     | nova_senha | confirme_a_senha | comportamento_esperado       |
-      | expirado | test123    | test123          | Este link expirou            |
-      | ativo    | test123    | test345h         | As senhas não coincidem      |
-
-    Cenário: Recuperação de senha com email inexistente
-    Dado que estou na página de redefinir senha
-    Quando eu preencher o campo "Email" com "Test@test"
-    Então deve aparecer a mensagem "Esse email não corresponde a nenhuma conta. Tente novamente."
+    Cenário: Link expirado
+    Dado que eu estou na página de "Redefinir senha"
+    Quando eu preencher o campo "Insira uma nova senha" com "145644"
+    E o campo "Confirme a nova senha" com "145644" 
+    E clicar no botão "Redefinir senha"
+    Então deve aparecer a mensagem "This link has expired. Request a new one to reset your password."
 
     Cenário: Design responsivo em desktop
     Dado que estou na página de Login do Código Certo usando um dispositivo desktop

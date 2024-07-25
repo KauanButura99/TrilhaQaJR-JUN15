@@ -2,7 +2,7 @@
 
 Funcionalidade: Tela de Registre-se
     Como usuário da plataforma Codigo Certo
-    Quero me registrar na plataforma
+    Quero poder me registrar na plataforma
     Para se inscrever nos projetos voluntários
 
     Cenário: Carregar a Página registre-se
@@ -142,7 +142,7 @@ Funcionalidade: Tela de Registre-se
     E clicar na caixa "Não sou um robô"
     Então deve aparecer uma mensagem de "Registro feito com sucesso"
 
-    Cenário: Multiplos Registros inválidos
+    Esquema do Cenário: Multiplos Registros inválidos
     Dado que estou na página de registre-se do Codigo Certo
     Então eu devo receber o <comportamento_esperado>
 
