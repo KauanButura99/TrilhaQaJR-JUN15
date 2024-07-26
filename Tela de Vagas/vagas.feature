@@ -5,29 +5,32 @@ Como usuário da Plataforma Código Certo
 Quero visualizar as vagas disponívesis 
 Para que eu possa se registrar nas vagas de voluntários
 
-    Cenário: Carregar a Página de Vagas
-    Dado que estou na página vagas do Código Certo
-    Então devo visualizar todos os conteúdos da página corretamente
 
-    Cenário: Problemas de rede ao carregar a Página
-    Dado que estou com problemas de conectividade com o site
-    Quando eu estiver na página de vagas
-    Então devo visualizar uma mensagem de "Por favor, volte mais tarde"
+    Cenário: Verificar as imagens da página
+    Dado que usuário esteja na página de vagas do Codigo Certo
+    Quando verificar as imagens da página de vagas
+    Então será possível validar que ela está de acordo com a documentação
 
-    Cenário: Formatação dos textos da página
-    Dado Dado que estou na página vagas do Código Certo
-    Quando carregar a página 
-    Entao devo visualizar os textos da página indentados
+    Cenário: Verificar formatação dos textos da página
+    Dado que usuário esteja na página de vagas do Codigo Certo
+    Quando verificar os textos da página de vagas
+    Então será possível validar que ela está de acordo com a documentação
 
-    Cenário: As imagens da página
-    Dado Dado que estou na página vagas do Código Certo
-    Quando carregar a página 
-    Entao devo visualizar as fotos da página corretamente   
+    Cenário: Verificar o estilo da lista de vagas da página 
+    Dado que usuário esteja na página de vaga do Codigo Certo
+    Quando verificar o estilo da página de vagas
+    Então será possível validar que ela está de acordo com a documentação
 
-    Cenário: Página deve carregar as lista de vagas
-    Dado que eu estou na página de vagas do Código Certo
-    Quando fazer o carragamento da página 
-    Entao devo visualizar as listas de vagas 
+    Cenário: Verificar se o título "Nome" da vaga está presente na página de vagas
+    Dado que o usuário esteja na página de vagas do Código Certo
+    Quando verificar se o título "Nome" está presente no card de cada vaga
+    Então o título "Nome" deve ser visível e localizado no topo do card de cada vaga
+
+
+
+
+        // continuar
+
 
     Cenário: As vagas de voluntáriado devem conter o Nome a vaga
     Dado que eu estou na página de vagas do Código Certo
@@ -109,9 +112,11 @@ Para que eu possa se registrar nas vagas de voluntários
             | test | qa        | test@test.com | 11-98765-4321 | manhã              |             | experiencia obrigatório       |
 
     Cenário: Design responsivo em desktop
-    Dado que estou na página de vagas do Código Certo usando um dispositivo desktop
+    Dado que o usuário esteja utilizando um dispositivo com a tela maior que 992px      
+    Quando acessar a página de vagas do Codigo Certo
     Então todos os elementos devem ser exibidos corretamente sem sobreposição
 
-    Cenário: Design responsivo em dispositivo móvel
-    Dado que estou na página de vagas do Código Certo usando um dispositivo móvel
-    Então todos os elementos devem ser exibidos corretamente sem sobreposição 
+    Cenário: Design responsivo em celulares 
+    Dado que o usuário esteja utilizando um dispositivo com a tela menor que 768px    
+    Quando acessar a página de vagas do Codigo Certo
+    Então todos os elementos devem ser exibidos corretamente sem sobreposição
