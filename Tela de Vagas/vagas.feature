@@ -22,84 +22,182 @@ Para que eu possa se registrar nas vagas de voluntários
     Então será possível validar que ela está de acordo com a documentação
 
     Cenário: Verificar se o título "Nome" da vaga está presente na página de vagas
-    Dado que o usuário esteja na página de vagas do Código Certo
+    Dado que o usuário esteja na página de vagas do Codigo Certo
     Quando verificar se o título "Nome" está presente no card de cada vaga
     Então o título "Nome" deve ser visível e localizado no topo do card de cada vaga
 
+    Cenário: Verificar se as vagas de voluntáriado contém a descrição da vaga
+    Dado que o usuário esteja na página de vagas do Codigo Certo
+    Quando o usuário selecionar a vaga desejada
+    Entao deve estar visível a descrição da vaga de acordo com a documentação
 
+    Cenário: Verificar nome dos instrutores  
+    Dado que o usuário esteja na página de vagas do Codigo Certo
+    Quando o usuário selecionar a vaga desejada
+    Entao deve estar visível o nome do instrutor da vaga 
 
+    Cenário: Verificar a funcionalidade do botão "Quero participar"
+    Dado que o usário esteja na página de vagas do Codigo Certo
+    Quando o usuário clicar no botão "Quero participar"
+    Então deve levar o usuário para página de formulário
+    E deve visualizar o título "Participação em Projetos Voluntários" 
 
-        // continuar
+    Cenário: Verificar se o campo "*Nome" está presente na página
+    Dado que o usuário esteja na página de formulário
+    Quando carregar a página completamente
+    Então deve estar vísivel o campo "*Nome" de acordo com a documentação
 
+    Cenário: Verificar se o campo "*Nome" está sendo preenchido
+    Dado que o usuário esteja na página de formulário
+    Quando o usuário clicar no campo "*Nome"
+    E escrever "Teste"
+    Então o texto "Teste" deve ser exibido no campo "*Nome"
 
-    Cenário: As vagas de voluntáriado devem conter o Nome a vaga
-    Dado que eu estou na página de vagas do Código Certo
-    Quando eu escolher a minha área
-    Entao devo visualizar o nome da vaga 
+    Cenário: Verificar se o campo "Sobrenome" está presente na página
+    Dado que o usuário esteja na página de formulário
+    Quando carregar a página completamente
+    Então deve estar vísivel o campo "*Sobrenome" de acordo com a documentação
 
-    Cenário: As vagas de voluntáriado devem conter a Descrição da vaga
-    Dado que eu estou na página de vagas do Código Certo
-    Quando eu escolher a minha área
-    Entao devo visualizar a descrição da vaga
+    Cenário: Verificar se o campo "*Sobrenome" está sendo preenchido
+    Dado que o usuário esteja na página de formulário
+    Quando o usuário clicar no campo "*Sobrenome"
+    E escrever "Sopranos"
+    Então o texto "Sopranos" deve ser exibido no campo "*Sobrenome"
 
-    Cenário: As vagas de voluntáriado devem conter o nome do Instrutor 
-    Dado que eu estou na página de vagas do Código Certo
-    Quando eu escolher a minha área
-    Entao devo visualizar o nome do Instrutor da vaga
+    Cenário: Verificar se o campo "*Email" está presente na página
+    Dado que o usuário esteja na página de formulário
+    Quando carregar a página completamente
+    Então deve estar vísivel o campo "*Email" de acordo com a documentação
 
-    Cenário: Quando eu clicar no botão "Quero participar" deve me direcionar para a página de formulário da vaga
-    Dado que eu estou na página de vagas do Código Certo
-    Quando eu clicar no botão "Quero participar"
-    Então deve me direcionar para a página de formulário daquela vaga
+    Cenário: Verificar se o campo "*Email" está sendo preenchido
+    Dado que o usuário esteja na página de formulário
+    Quando o usuário clicar no campo "*Email"
+    E escrever "test@sopranos.com"
+    Então o texto "test@sopranos.com" deve ser exibido no campo "*Email"
 
-    Cenário: O campo Nome deve ser visualizado e preenchido
-    Dado que eu estou na página de formulário da vaga escolhida
-    Quando eu visualizar o campo "Nome"
-    Então devo conseguir preencher o meu nome com "Test"
+    Cenário: Verificar se o campo "*Celular" está presente na página
+    Dado que o usuário esteja na página de formulário
+    Quando carregar a página completamente
+    Então deve estar vísivel o campo "*Celular" de acordo com a documentação
 
-    Cenário: O campo Sobrenome deve ser visualizado e preenchido
-    Dado que eu estou na página de formulário da vaga escolhida
-    Quando eu visualizar o campo "Sobrenome"
-    Então devo conseguir preencher o meu sobrenome com "Soprano"
+    Cenário: Verificar se o campo "*Celular" está sendo preenchido
+    Dado que o usuário esteja na página de formulário
+    Quando o usuário clicar no campo "*Celular"
+    E escrever "940028922"
+    Então o texto "940028922" deve ser exibido no campo "*Celular"
 
-    Cenário: O campo Email deve ser visualizado e preenchido
-    Dado que eu estou na página de formulário da vaga escolhida
-    Quando eu visualizar o campo "Email"
-    Então devo conseguir preencher o meu email com "test@Soprano.com"
+    Cenário: Verificar se o botão de opção do Horário Disponível "Manhã" está presente na página
+    Dado que o usuário esteja na página de formulário 
+    Quando a página carregar completamente 
+    Então o botão de opção "Manhã" deve estar visível na página
 
-    Cenário: O campo Celular deve ser visualizado e preenchido
-    Dado que eu estou na página de formulário da vaga escolhida
-    Quando eu visualizar o campo "Celular"
-    Então devo conseguir preencher o meu número com "94002-8922"
+    Cenário: Verificar se o botão de opção do Horário Disponível "Tarde" está presente na página
+    Dado que o usuário esteja na página de formulário 
+    Quando a página carregar completamente 
+    Então o botão de opção "Tarde" deve estar visível na página
 
-    Cenário: Botão de escolha de "Horario Disponível"
-    Dado que eu estou na página de formulário da vaga escolhida
-    Quando eu clicar no botão de escolha para o período da "Manhã"
-    Então eu devo conseguir selecionar o horario escolhido 
+    Cenário: Verificar se o botão de opção do Horário Disponível "Noite" está presente na página
+    Dado que o usuário esteja na página de formulário 
+    Quando a página carregar completamente 
+    Então o botão de opção "Noite" deve estar visível na página
 
-    Cenário: Botão de escolha de "Nível da Experiência" 
-    Dado que eu estou na página de formulário da vaga escolhida
-    Quando eu clicar no botão de escolha de "Junior"
-    Então eu devo conseguir selecionar a opção escolhida
+    Cenário: Verificar se o botão de opção do Horário Disponível "Apenas Fins de Semana" está presente na página
+    Dado que o usuário esteja na página de formulário 
+    Quando a página carregar completamente 
+    Então o botão de opção "Apenas Fins de Semana" deve estar visível na página
 
-    Cenário: Botão de escolha "Gostaria de liderar Projetos?"
-    Dado que eu estou na página de formulário da vaga escolhida
-    Quando eu clicar no botão de escolha de "No momento prefiro focar ..."
-    Então eu devo conseguir selecionar a opção escolhida
+    Cenário: Verificar se o botão de opção do Horário Disponível "Total Disponibilidade" está presente na página
+    Dado que o usuário esteja na página de formulário 
+    Quando a página carregar completamente 
+    Então o botão de opção "Total Disponibilidade" deve estar visível na página
 
-    Cenário: Botão de "Enviar" o formulário deve estar presente na página
-    Dado que eu estou na página de formulário da vaga escolhida
-    Quando eu visualizar o botão "Enviar"
-    Entao devo conseguir enviar o meu formulário com sucesso    
+    Cenário: Verificar a funcionalidade do botão de opção Horário Disponível "Manhã"
+    Dado que o usuário esteja na página de formulário
+    Quando o usuário clicar na opção "Manhã"
+    Entao o botão de opção "Manhã" deve ser selecionado 
+
+    Cenário: Verificar a funcionalidade do botão de opção Horário Disponível "Tarde"
+    Dado que o usuário esteja na página de formulário
+    Quando o usuário clicar na opção "Tarde"
+    Entao o botão de opção "Tarde" deve ser selecionado 
+
+    Cenário: Verificar a funcionalidade do botão de opção Horário Disponível "Noite"
+    Dado que o usuário esteja na página de formulário
+    Quando o usuário clicar na opção "Noite"
+    Entao o botão de opção "Noite" deve ser selecionado 
+
+    Cenário: Verificar a funcionalidade do botão de opção Horário Disponível "Apenas Fins de Semana"
+    Dado que o usuário esteja na página de formulário
+    Quando o usuário clicar na opção "Apenas Fins de Semana"
+    Entao o botão de opção "Apenas Fins de Semana" deve ser selecionado 
+
+    Cenário: Verificar a funcionalidade do botão de opção Horário Disponível "Total Disponibilidade"
+    Dado que o usuário esteja na página de formulário
+    Quando o usuário clicar na opção "Total Disponibilidade"
+    Entao o botão de opção "Total Disponibilidade" deve ser selecionado 
+
+    Cenário: Verificar se o botão de opção do Nível de Experiência "Junior" está presente na página
+    Dado que o usuário esteja na página de formulário 
+    Quando a página carregar completamente 
+    Então o botão de opção "Junior" deve estar visível na página
+
+    Cenário: Verificar se o botão de opção do Nível de Experiência "Pleno" está presente na página
+    Dado que o usuário esteja na página de formulário 
+    Quando a página carregar completamente 
+    Então o botão de opção "Pleno" deve estar visível na página
+
+    Cenário: Verificar se o botão de opção do Nível de Experiência "Senior" está presente na página
+    Dado que o usuário esteja na página de formulário 
+    Quando a página carregar completamente 
+    Então o botão de opção "Senior" deve estar visível na página
+
+    Cenário: Verificar a funcionalidade do botão de opção do Nível de Experiência "Junior"
+    Dado que o usuário esteja na página de formulário
+    Quando o usuário clicar na opção "Junior"
+    Entao o botão de opção "Junior" deve ser selecionado 
+
+    Cenário: Verificar a funcionalidade do botão de opção do Nível de Experiência "Pleno"
+    Dado que o usuário esteja na página de formulário
+    Quando o usuário clicar na opção "Pleno"
+    Entao o botão de opção "Pleno" deve ser selecionado 
+
+    Cenário: Verificar a funcionalidade do botão de opção do Nível de Experiência "Senior"
+    Dado que o usuário esteja na página de formulário
+    Quando o usuário clicar na opção "Senior"
+    Entao o botão de opção "Senior" deve ser selecionado 
+
+    Cenário: Verificar se o botão de opção do Gostaria de liderar Projetos? "Sim tenho interesse..." está presente na página
+    Dado que o usuário esteja na página de formulário 
+    Quando a página carregar completamente 
+    Então o botão de opção "Sim tenho interesse..." deve estar visível na página
+
+    Cenário: Verificar se o botão de opção do Gostaria de liderar Projetos? "No momento prefiro focar no desenvolvimento..." está presente na página
+    Dado que o usuário esteja na página de formulário 
+    Quando a página carregar completamente 
+    Então o botão de opção "No momento prefiro focar no desenvolvimento..." deve estar visível na página
+
+    Cenário: Verificar a funcionalidade do botão de opção do Gostaria de liderar Projetos? "Sim tenho interesse..."
+    Dado que o usuário esteja na página de formulário
+    Quando o usuário clicar na opção "Sim tenho interesse..."
+    Entao o botão de opção "Sim tenho interesse..." deve ser selecionado 
+
+    Cenário: Verificar a funcionalidade do botão de opção do Gostaria de liderar Projetos? "No momento prefiro focar no desenvolvimento..."
+    Dado que o usuário esteja na página de formulário
+    Quando o usuário clicar na opção "No momento prefiro focar no desenvolvimento..."
+    Entao o botão de opção "No momento prefiro focar no desenvolvimento..." deve ser selecionado 
+
+    Cenário: Verificar se o botão de "Enviar" está presente na página
+    Dado que o usário esteja na  página de formulário da vaga escolhida
+    Quando a página carregar completamente
+    Entao o botão "Enviar" deve estar vísivel na página 
 
    # Cenário: Depois da inscrição uma confirmação deve ser recebida
-    #Dado que eu estou na página de formulário da vaga escolhida
    
-
-    Esquema do Cenário: Registrar-se para uma vaga de voluntário
-    Dado que estou na página de formulário de inscrição da vaga da Plataforma Código Certo
-    Quando eu preencher o campo <nome>
-    Então eu devo ver uma mensagem <comportamento_esperado>
+    Esquema do Cenário: Verificar mensagens de campos ou botões de opções 
+    Dado que o usário esteja na página de formulário 
+    Quando o usuário preencher <campos>
+    E <botoes_de_opcoes>
+    Então deve ser exibida mensagem <comportamento_esperado>
 
             Exemplos:
             | nome | sobrenome | email         | celular       | horario_disponivel | experiencia | comportamento_esperado        |
