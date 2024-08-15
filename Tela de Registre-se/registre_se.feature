@@ -5,53 +5,80 @@ Funcionalidade: Tela de Registre-se
     Quero poder me registrar na plataforma
     Para se inscrever nos projetos voluntários
 
-    Cenário: Carregar a Página registre-se
-    Dado que estou na página registre-se do Codigo Certo
-    Então devo visualizar todos os conteúdos da página corretamente
+    Cenário: Verificar a formatação dos textos da página
+    Dado que o usuário esteja na página registre-se do Codigo Certo
+    Quando o usuário verificar os textos da página de registre-se
+    Entao os textos da página devem estar conforme especificado na documentação
 
-    Cenário: Problemas de rede ao carregar a Página
-    Dado que estou com problemas de conectividade com o site
-    Quando eu estiver na página registre-se
-    Então devo visualizar uma mensagem de "Por favor, volte mais tarde"
+    Cenário: Verificar o botão "X" no canto superior a direita se está presente na página
+    Dado que o usário esteja na página de registre-se do Codigo Certo
+    Quando o usuário verificar o botão "X" está presente na página de registre-se
+    Entao o botão "X" deve estar visível conforme especificado na documentação
 
-    Cenário: Botão "X" no canto superior a direita para fechar da página "Registre-se"
-    Dado que estou na página de registre-se do Codigo Certo
-    Quando eu clicar no botão "X"
-    Entao devo ser redirecionado para página inicial do Codigo Certo
+    Cenário: Verificar a funcionalidade do botão "X" no canto superior a direita
+    Dado que o usuário esteja na página de registre-se do Codigo Certo
+    Quando o usuário clicar no botão "X"
+    Entao o usuário deve se direcionado para página inicial do Codigo Certo "https://www.codigocertocoders.com.br/"
+    E deve visualizar o título "Construindo o amanhã,hoje. Codigo Certo Coders"
 
-    Cenário: Formatação dos textos da página
-    Dado Dado que estou na página registre-se do Codigo Certo
-    Quando carregar a página 
-    Entao devo visualizar os textos da página indentados
+    Cenário: Verificar cor do Background da página
+    Dado que o usuário esteja na página de registre-se do Codigo Certo
+    Quando o usuário verificar a cor do backaground da página de registre-se
+    Entao a cor do background da página deve estar conforme especificado na documentação
 
-    Cenário: Cor do Background da página
-    Dado que estou na página de registre-se do Codigo Certo
-    Entao a cor deve ser Preta 
+    Cenário: Verificar se o título "Registre-se" está presente na página
+    Dado que o usuário esteja na página de Registre-se do Codigo Certo
+    Quando o usuário verificar se o título "Registre-se" está presente na página de registre-se
+    Entao o título "Registre-se" deve estar visível conforme especificado na documentação
 
-    Cenário: Fonte da página deve ser branca
-    Dado que estou na página de registre-se do Codigo Certo
-    Quando carregar o texto "Registre-se"
-    E "Já é membro?"
-    Entao as cores dos textos devem ser brancas
+    Cenário: Verificar se a cor do título "Registre-se" 
+    Dado que o usuário esteja na página de Registre-se do Codigo Certo
+    Quando o usuário verificar se o título "Registre-se" 
+    Entao a cor do título "Registre-se" deve estar conforme especificado na documentação
 
-    Cenario: Opção de link para ser direcionado para página de login
-    Dado que estou na página de registre-se do Codigo Certo
-    Quando eu clicar no link "Login"
-    Entao devo ir para página de Login
+    Cenário: Verificar se o texto "Já é membro?" está presente na página
+    Dado que o usuário esteja na página de Registre-se do Codigo Certo
+    Quando o usuário verificar o texto "Já é mebro?" está presente na página de registre-se
+    Entao o texto "Já é membro?" deve estar visível conforme especificado na documentação
 
-    Cenário: Cor do link "Login" 
-    Dado que estou na página de registre-se do Codigo Certo
-    Entao o link "Login" deve ser vermelho
+    Cenário: Verificar se a cor do texto "Já é membro?" 
+    Dado que o usuário esteja na página de Registre-se do Codigo Certo
+    Quando o usuário verificar se o texto "Já é membro?" 
+    Entao a cor do texto "Já é membro?" deve estar conforme especificado na documentação
 
-    Cenário: Botão de Registrar-se com Google deve estar presente na página
-    Dado que estou na página de registre-se do Codigo Certo
-    Entao o botão "Registrar-se com Google" deve estar visível
+    Cenario: Verificar se o link "Login" está presente na página
+    Dado que o usuário esteja na página de registre-se do Codigo Certo
+    Quando o usuário verificar se o link "Login" está presente na página de registre-se
+    Entao o link "Login" deve ser visível conforme especificado na documentação
 
-    Cenário: Registrar-se com a conta do Google válida
-    Dado que estou na página de registre-se do Codigo Certo
-    Quando eu clicar no botão "Registrar-se com o Google"
-    E ser direcionado para o dominio do Google para aceitar as condições
-    Então devo conseguir se registrar com a minha conta Google com sucesso
+    Cenário: Verificar a cor do link "Login" 
+    Dado que o usuário esteja na página de registre-se do Codigo Certo
+    Quando o usuário verificar a cor do link "Login"
+    Entao a cor do link "Login" deve estar conforme especificado na documentação
+
+    Cenário: Verificar a funcionalidade do link "Login"
+    Dado que o usuário esteja na página de registre-se do Codigo Certo
+    Quando o usuário clicar no link "Login"
+    Entao o usuário deve ser direcionado para página de login 
+    E deve visualizar o título "Login"
+
+    Cenário: Verificar o botão "Registrar-se com Google" está presente na página
+    Dado que o usuário esteja na página de registre-se do Codigo Certo
+    Quando o usuário verificar se o botão "Registrar-se com Google" está presente na página registre-se
+    Entao o botão "Registrar-se com Google" deve estar visível conforme especificado na documentação
+
+    Cenário: Verificar a funcionalidade do botão "Registrar-se com a conta do Google"
+    Dado que o usuário esteja na página de registre-se do Código Certo
+    Quando o usuário clicar no botão "Registrar-se com o Google"
+    Entao o usuário deve ser direcionado para o domínio "Fazer login nas Contas Google" conforme especificado na documentação
+
+    Cenário: Registrar com sucesso com a conta do Google
+    Dado que o usuário esteja na página de registre-se do Código Certo
+    Quando o usuário clicar no botão "Registrar-se com o Google"
+    E o usuário escolher uma conta
+    Então o usuário deve fazer o login com sucesso
+
+    // Continue
 
     Cenário: Registrar-se com a conta do Google inválida
     Dado que estou na página de registre-se do Codigo Certo

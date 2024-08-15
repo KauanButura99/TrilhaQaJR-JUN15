@@ -5,6 +5,10 @@ Como usuário da Plataforma Código Certo
 Quero visualizar as vagas disponívesis 
 Para que eu possa se registrar nas vagas de voluntários
 
+    Cenário: Verificar o Fivicon
+    Dado que o usuário esteja na página de vagas do Codigo Certo
+    Quando carregar a página completamente
+    Entao o ícone do Codigo Certo deve ser exibido ao lado título da aba
 
     Cenário: Verificar as imagens da página
     Dado que usuário esteja na página de vagas do Codigo Certo
