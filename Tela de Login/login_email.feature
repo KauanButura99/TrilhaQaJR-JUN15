@@ -1,6 +1,6 @@
 #language: pt
 
-Funcionalidade: Registrar-se com email
+Funcionalidade: Login com email
  Como usuário da plataforma Codigo Certo
  Quero poder me registrar na plataforma
  Para se inscrever nos projetos voluntários
@@ -41,10 +41,20 @@ Funcionalidade: Registrar-se com email
     Entao o texto "123456" deve ser exibido no campo "Senha"
 
     Cenário: Verificar o link "Esqueceu a senha?" está presente na página
+    Dado que o usuário esteja na página de login do Codigo Certo
+    Quando o usuário verificar se o link "Esquece a senha?" está presente na página
+    Entao o link "Esqueceu a senha?" deve estar visível conforme especificado na documentação 
 
     Cenário: Verificar a cor do link "Esqueceu a senha?"
+    Dado que o usuário esteja na página de login do Codigo Certo
+    Quando o usuário verificar a cor do link "Esquece a senha?" 
+    Entao a cor do link "Esqueceu a senha?" deve estar visível conforme especificado na documentação 
 
     Cenário: Verificar a funcionalidade do link "Esqueceu a senha?"
+    Dado que o usuário esteja na página de login do Codigo Certo
+    Quando o usuário clicar no link "Esqueceu a senha?"
+    Entao o campo "Email" deve estar presente na página
+    E o título da página "Redefinir senha" deve estar presente na página
 
     Cenário: Verificar o botão "Fazer login" está presente na página
     Dado que o usuário tenha clicado no botão "Login com email" na página login do Codigo Certo
@@ -66,7 +76,7 @@ Funcionalidade: Registrar-se com email
     Quando o usuário clicar no botão "Fazer login"
     Entao o usuário deve visualizar as mensagens "Insira um email" no campo email e "Insira uma senha" no campo senha
 
-    Esquema do Cenário: Múltiplos registros
+    Esquema do Cenário: Múltiplos logins
     Dado que o usuário tenha clicado no botão "Login com email" na página  do Codigo Certo
     Quando o usuário preencher os campos e clicar no botão "Fazer login"
     Então o usuário deve receber a mensagem "<comportamento_esperado>"
@@ -94,100 +104,3 @@ Funcionalidade: Registrar-se com email
     Dado que o usuário esteja utilizando um dispositivo com a tela menor que 768px    
     Quando acessar a página de registre-se do Codigo Certo
     Então todos os elementos devem ser exibidos corretamente sem sobreposição   
-
-
-
-
-    // usavel
-    Cenário: Link "Esqueceu a senha?"
-    Dado que eu estou na página de login do Codigo Certo
-    Quando eu clicar no link "Esqueceu a senha?"
-    Entao devo ser redirecionado para página de "Insira email de login e enviaremos um link para que você possa redefinir sua senha."
-
-    Cenário: Quando eu preecher o meu email cadastrado devo receber um email de recuperação
-    Dado que eu estou na página de Redenifir senha do Codigo Certo
-    Quando eu preencher o campo "Email" com um email já registrado 
-    Entao devo receber um email de redefinição de senha
-
-    Cenário: Recebimento de redefinição de senha no email
-    Dado que eu estou no email de redefinição de senha
-    Quando eu clicar no botão "Redefinir senha" 
-    Então devo ser redirecionado para página "Redefinir senha" do Codigo Certo 
-
-    Cenário: Verificar texto "Redefinir senha"
-    Dado que eu estou na página de "Redefinir senha"
-    Então devo visualizar do texto "Redefinir senha"
-
-    Cenário: Verificar a posição do texto "Redefinir senha"
-    Dado que eu estou na página de "Redefinir senha"
-    Então devo validar a posição do texto "Redefinir senha" com base na documentação
-
-    Cenário: Verificar a cor do texto "Redefinir senha"
-    Dado que eu estou na página de "Redefinir senha"
-    Então devo validar a cor do texto "Redefinir senha" com base na documentação
-
-    Cenário: Verificar texto "Insira sua nova senha abaixo"
-    Dado que eu estou na página de "Redefinir senha"
-    Então devo visualizar do texto "Insira sua nova senha abaixo" 
-
-    Cenário: Verificar a posição do texto "Insira sua nova senha abaixo"
-    Dado que eu estou na página de "Redefinir senha"
-    Então devo validar a posição do texto "Insira sua nova senha abaixo"  com base na documentação
-
-    Cenário: Verificar a cor do texto "Insira sua nova senha abaixo"
-    Dado que eu estou na página de "Redefinir senha"
-    Então devo validar a cor do texto "Insira sua nova senha abaixo" com base na documentação
-
-    Cenário: Campo "Insira uma nova senha"
-    Dado que eu estou na página de "Redefinir senha"
-    Entao devo conseguir preecher o campo "Insira uma nova senha" com "145644"
-
-    Cenário: Campo "Confirme a nova senha"
-    Dado que eu estou na página de "Redefinir senha"
-    Entao devo conseguir preecher o campo "Confirme a nova senha" com "145644" 
-
-    Cenário: Verificar botão "Redefinir senha"
-    Dado que eu estou na página de "Redefinir senha"
-    Então  Então devo visualizar o botão "Redefinir senha"
-
-    Cenário: Verificar Posição botão "Redefinir senha"
-    Dado que eu estou na página de "Redefinir senha"
-    Então devo validar a posição do botão "Redefinir senha" com base na documentação
-
-    Cenario: Verificar cor do botão "Redefinir senha"
-    Dado que eu estou na página de "Redefinir senha"
-    Então devo validar a cor do botão "Redefinir senha" com base na documentação
-
-    Cenário: Redefinir senha com sucesso
-    Dado que eu estou na página de "Redefinir senha"
-    Quando eu preencher o campo "Insira uma nova senha" com "145644"
-    E o campo "Confirme a nova senha" com "145644" 
-    E clicar no botão "Redefinir senha"
-    Então deve aparecer a mensagem "Sua senha foi alterada"
-
-    Esquema do Cenário: Multiplas redefinições de senha inválida 
-    Dado que eu estou na página de "Redefinir senha"
-    Quando eu inserir dados incorretos nos campos <Insira_uma_nova_senha>
-    E <confirme_a_nova_senha>
-    Entao deve aparece <comportamento_esperado>
-
-      Exemplos:
-      | Insira_uma_nova_senha | confirme_a_senha | comportamento_esperado                    |
-      |                       |                  | Insira uma senha                          |
-      | test123               | test345h         | As senhas não coincidem. Tente novamente. |
-
-
-    Cenário: Link expirado
-    Dado que eu estou na página de "Redefinir senha"
-    Quando eu preencher o campo "Insira uma nova senha" com "145644"
-    E o campo "Confirme a nova senha" com "145644" 
-    E clicar no botão "Redefinir senha"
-    Então deve aparecer a mensagem "This link has expired. Request a new one to reset your password."
-
-    Cenário: Design responsivo em desktop
-    Dado que estou na página de Login do Código Certo usando um dispositivo desktop
-    Então todos os elementos devem ser exibidos corretamente sem sobreposição
-
-    Cenário: Design responsivo em dispositivo móvel
-    Dado que estou na página de Login do Código Certo usando um dispositivo móvel
-    Então todos os elementos devem ser exibidos corretamente sem sobreposição
