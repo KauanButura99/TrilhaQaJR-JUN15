@@ -88,14 +88,14 @@ Funcionalidade: Registrar-se com email
 
             Exemplos:
 
-            | Email         | Senha | Nõa sou um robô | Registre-se |
-            | test@test.com | 12345 | selecionado     | clicado     | Registro feito com sucesso |
-            | test@test.com | 12345 | selecionado     | clicado     | Email já existente |
-            | test@test.com |       | selecionado     | clicado     | Insira uma senha |
-            |               | 12345 | selecionado     | clicado     | Insira um email |
-            |               |       | selecionado     | clicado     | Insira um email e Insira uma senha |
-            | test@test.com | 12345 |                 | Inativo     | Captcha é necessário para verificar se você é um ser humano. |
-            |               |       |                 |             | Impossibilitado de se registrar |
+                        | Email         | Senha | Nõa sou um robô | Registre-se | comportamento_esperado                                       |
+                        | test@test.com | 12345 | selecionado     | clicado     | Registro feito com sucesso                                   |
+                        | test@test.com | 12345 | selecionado     | clicado     | Email já existente                                           |
+                        | test@test.com |       | selecionado     | clicado     | Insira uma senha                                             |
+                        |               | 12345 | selecionado     | clicado     | Insira um email                                              |
+                        |               |       | selecionado     | clicado     | Insira um email e Insira uma senha                           |
+                        | test@test.com | 12345 |                 | Inativo     | Captcha é necessário para verificar se você é um ser humano. |
+                        |               |       |                 |             | Impossibilitado de se registrar                              |
 
     Cenário: Verificar o ícone "Google" está presente na página
     Dado que o usuário tenha clicado no botão "Registrar-se com email" na página registre-se do Codigo Certo
